@@ -1,0 +1,110 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Información del Proyecto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+      <ion-item>
+        <h2>{{proyecto.proy_title}}</h2>
+      </ion-item>
+      
+      <ion-item-group>
+        <ion-item-divider color="light">Descripción</ion-item-divider>
+        <ion-item>{{proyecto.proy_description}}</ion-item>
+      </ion-item-group>
+
+      <ion-item-group>
+        <ion-item-divider color="light">Nombre líder</ion-item-divider>
+        <ion-item>{{proyecto.proy_nombrelider}}</ion-item>
+      </ion-item-group>
+      <ion-item-group>
+        <ion-item-divider color="light">Apellidos líder</ion-item-divider>
+        <ion-item>{{proyecto.proy_apellidolider}}</ion-item>
+      </ion-item-group>
+      <ion-item-group>
+        <ion-item-divider color="light">Carrera o programa</ion-item-divider>
+        <ion-item>{{proyecto.proy_carreralider}}</ion-item>
+      </ion-item-group>
+      <ion-item-group>
+        <ion-item-divider color="light">Semestre</ion-item-divider>
+        <ion-item>{{proyecto.proy_semestrelider}}</ion-item>
+      </ion-item-group>
+      <ion-item-group>
+        <ion-item-divider color="light">Correo</ion-item-divider>
+        <ion-item>{{proyecto.proy_correolider}}</ion-item>
+      </ion-item-group>
+      <ion-item-group>
+        <ion-item-divider color="light">Celular</ion-item-divider>
+        <ion-item>{{proyecto.proy_celularlider}}</ion-item>
+      </ion-item-group>
+      <ion-item-group>
+        <ion-item-divider color="light">Orientador</ion-item-divider>
+        <ion-item>{{proyecto.proy_docente}}</ion-item>
+      </ion-item-group>
+      
+      <ion-item-group>
+        <ion-item-divider color="light">Página WEB</ion-item-divider>
+        <ion-item>{{proyecto.proy_paginaweb}}</ion-item>
+      </ion-item-group>
+      <ion-item-group>
+        <ion-item-divider color="light">Logo</ion-item-divider>
+        <ion-item>{{proyecto.proy_logo}}</ion-item>
+      </ion-item-group>
+      <ion-item-group>
+        <ion-item-divider color="light">Poster</ion-item-divider>
+        <ion-item>{{proyecto.proy_poter}}</ion-item>
+      </ion-item-group>
+      <ion-item-group>
+        <ion-item-divider color="light">Artículo IEEE</ion-item-divider>
+        <ion-item>{{proyecto.proy_articuloieee}}</ion-item>
+      </ion-item-group>
+      <ion-item-group>
+        <ion-item-divider color="light">Problema</ion-item-divider>
+        <ion-item>{{proyecto.proy_problema}}</ion-item>
+      </ion-item-group>
+      <ion-item-group>
+        <ion-item-divider color="light">Objetivo</ion-item-divider>
+        <ion-item>{{proyecto.proy_poblacionobjetivo}}</ion-item>
+      </ion-item-group>
+      <ion-item-group>
+        <ion-item-divider color="light">Beneficiarios</ion-item-divider>
+        <ion-item>{{proyecto.proy_cantidadbeneficiarios}}</ion-item>
+      </ion-item-group>
+      <ion-item-group>
+        <ion-item-divider color="light">Tiempo análisis</ion-item-divider>
+        <ion-item>{{proyecto.proy_duracionanalisis}}</ion-item>
+      </ion-item-group>
+      <ion-item-group>
+        <ion-item-divider color="light">Tiempo Diseño</ion-item-divider>
+        <ion-item>{{proyecto.proy_duraciondiseno}}</ion-item>
+      </ion-item-group>
+      <ion-item-group>
+        <ion-item-divider color="light">Tiempo proyecto</ion-item-divider>
+        <ion-item>{{proyecto.proy_duracionproyecto}}</ion-item>
+      </ion-item-group>
+      <ion-item-group>
+        <ion-item-divider color="light">Preupuesto proyecto</ion-item-divider>
+        <ion-item>{{proyecto.proy_presupuesto}}</ion-item>
+      </ion-item-group>
+      <ion-item-group>
+        <ion-item-divider color="light">Valor Proyecto</ion-item-divider>
+        <ion-item>{{proyecto.proy_valorproyecto}}</ion-item>
+      </ion-item-group>
+      <ion-item-group>
+        <ion-item-divider color="light">Cantidad de participantes</ion-item-divider>
+        <ion-item>{{proyecto.proy_cantidadparticipantes}}</ion-item>
+      </ion-item-group>
+
+      <ion-item-group>
+        <ion-item-divider color="light">Fecha de registro</ion-item-divider>
+        <ion-item>{{proyecto.proy_fecharegistro.day.text}}/{{proyecto.proy_fecharegistro.month.text}}/{{proyecto.proy_fecharegistro.year.text}}</ion-item>
+      </ion-item-group>
+      
+
+
+</ion-content>

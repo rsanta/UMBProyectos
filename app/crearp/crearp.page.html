@@ -1,0 +1,119 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Crear proyectos de aula - UMB</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="infoForm">
+    <ion-item>
+      <ion-label position="floating">Título</ion-label>
+      <ion-input type="text" formControlName="proy_title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Date</ion-label>
+      <ion-datetime displayFormat="DD MMMM YYYY" min="2016" max="2020-10-31" [(ngModel)]="myDate" formControlName="proy_fecharegistro">
+      </ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Descripción</ion-label>
+      <ion-input type="text" formControlName="proy_description"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Nombre del Líder</ion-label>
+      <ion-input type="text" formControlName="proy_nombrelider"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Apellido del líder</ion-label>
+      <ion-input type="text" formControlName="proy_apellidolider"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Carrera o programa</ion-label>
+      <ion-input type="text" formControlName="proy_carreralider"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Semestre</ion-label>
+      <ion-input type="text" formControlName="proy_semestrelider"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Correo</ion-label>
+      <ion-input type="text" formControlName="proy_correolider"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Celular</ion-label>
+      <ion-input type="text" formControlName="proy_celularlider"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Docente orientador</ion-label>
+      <ion-input type="text" formControlName="proy_docente"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="floating">Página WEB</ion-label>
+      <ion-input type="text" formControlName="proy_paginaweb"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Logo</ion-label>
+      <ion-input type="text" formControlName="proy_logo"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Poster</ion-label>
+      <ion-input type="text" formControlName="proy_poter"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Artículo IEEE</ion-label>
+      <ion-input type="text" formControlName="proy_articuloieee"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Problema</ion-label>
+      <ion-input type="text" formControlName="proy_problema"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Piblación Objetivo</ion-label>
+      <ion-input type="text" formControlName="proy_poblacionobjetivo"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Cantidad Beneficiarios</ion-label>
+      <ion-input type="text" formControlName="proy_cantidadbeneficiarios"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Plan de trabajo</ion-label>
+      <ion-input type="text" formControlName="proy_plantrabajo"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Duración Análisis</ion-label>
+      <ion-input type="text" formControlName="proy_duracionanalisis"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Duración Diseño</ion-label>
+      <ion-input type="text" formControlName="proy_duraciondiseno"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Duración total proyecto</ion-label>
+      <ion-input type="text" formControlName="proy_duracionproyecto"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Presupuesto</ion-label>
+      <ion-input type="text" formControlName="proy_presupuesto"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Valor total proyecto</ion-label>
+      <ion-input type="text" formControlName="proy_valorproyecto"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Cantidad de participantes</ion-label>
+      <ion-input type="text" formControlName="proy_cantidadparticipantes"></ion-input>
+    </ion-item>
+    <ion-button shape="round" color="primary" expand="block" [disabled]="!infoForm.valid" (click)="saveInfo()">Guardar</ion-button>
+  </form>
+</ion-content>
