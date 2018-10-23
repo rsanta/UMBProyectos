@@ -1,0 +1,57 @@
+<ion-header>
+    <ion-navbar color="primary">
+      <ion-title>
+        Descripción del proyecto UMB
+      </ion-title>      
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+  
+        <ion-item>
+          <h1>Título</h1>
+          <h2 text-wrap>{{proyecto.proy_title}}</h2>
+        </ion-item>
+        
+        <ion-item-group>
+          <ion-item-divider color="light">Descripción</ion-item-divider>
+          <ion-item text-wrap>{{proyecto.proy_description}}</ion-item>
+        </ion-item-group>
+
+        <ion-item-group>
+          <ion-item-divider color="light">Nombre Líder</ion-item-divider>
+          <ion-item text-wrap>{{proyecto.proy_nombrelider}} {{proyecto.proy_apellidolider}}</ion-item>
+        </ion-item-group>
+
+        <ion-item-group>
+          <ion-item-divider color="light">Descripción</ion-item-divider>
+          <ion-item text-wrap>{{proyecto.proy_description}}</ion-item>
+        </ion-item-group>
+
+        <ion-item-group>
+          <ion-item-divider color="light">Programa</ion-item-divider>
+          <ion-item text-wrap>{{proyecto.proy_carreralider}}</ion-item>
+        </ion-item-group>
+
+        <ion-item-group>
+          <ion-item-divider color="light">Semestre</ion-item-divider>
+          <ion-item text-wrap>{{proyecto.proy_semestrelider}}</ion-item>
+        </ion-item-group>
+
+        <ion-item-group>
+          <ion-item-divider color="light">Correo</ion-item-divider>
+          <ion-item text-wrap>{{proyecto.proy_correolider}}</ion-item>
+        </ion-item-group>
+
+        <ion-item-group>
+          <ion-item-divider color="light">Celular</ion-item-divider>
+          <ion-item text-wrap>{{proyecto.proy_celularlider}}</ion-item>
+        </ion-item-group>
+
+        <ion-item-group>
+          <ion-item-divider color="light">Docente orientador</ion-item-divider>
+          <ion-item text-wrap>{{proyecto.proy_docente}}</ion-item>
+        </ion-item-group>
+
+  </ion-content>
+  

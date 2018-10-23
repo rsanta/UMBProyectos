@@ -1,35 +1,35 @@
 import { Component } from '@angular/core';
+import { Platform } from 'ionic-angular';
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { Platform } from '@ionic/angular';
-import { SplashScreen } from '@ionic-native/splash-screen/ngx';
-import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { TabsPage } from '../pages/tabs/tabs';
+import { bdconfig } from './bdconfig';
+
 import * as firebase from 'firebase';
 
-var config = {
-  apiKey: "A...c",
-  authDomain: "umbproyectos01.firebaseapp.com",
-  databaseURL: "https://umbproyectos01.firebaseio.com",
-  projectId: "umbproyectos01",
-  storageBucket: "umbproyectos01.appspot.com",
-};
-@Component({
-  selector: 'app-root',
-  templateUrl: 'app.component.html'
-})
-export class AppComponent {
-  constructor(
-    private platform: Platform,
-    private splashScreen: SplashScreen,
-    private statusBar: StatusBar
-  ) {
-    this.initializeApp();
-  }
+// var config = {
+//   apiKey: "AIzaSyDX6VO8JW3bcaWhkmXTVeR5BcCZsaXHHZc",
+//   authDomain: "umbproyectos01.firebaseapp.com",
+//   databaseURL: "https://umbproyectos01.firebaseio.com",
+//   projectId: "umbproyectos01",
+//   storageBucket: "umbproyectos01.appspot.com",
+//   messagingSenderId: "540968578477"
+// };
 
-  initializeApp() {
-    this.platform.ready().then(() => {
-      this.statusBar.styleDefault();
-      this.splashScreen.hide();
+@Component({
+  templateUrl: 'app.html'
+})
+export class MyApp {
+  rootPage:any = TabsPage;
+
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
+    platform.ready().then(() => {
+      // Okay, so the platform is ready and our plugins are available.
+      // Here you can do any higher level native things you might need.
+      statusBar.styleDefault();
+      splashScreen.hide();
     });
-    firebase.initializeApp(config);
+    firebase.initializeApp(bdconfig.config);
   }
 }

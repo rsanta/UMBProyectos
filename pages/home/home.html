@@ -1,0 +1,49 @@
+<ion-header>
+    <ion-navbar color="primary">
+      <ion-title>
+        Lista de proyectos UMB para la semana de ingeniería
+      </ion-title>
+      <ion-buttons right>
+        <button ion-button (click)="crearp()">
+            <ion-icon name="add-circle"></ion-icon>
+          </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item-sliding *ngFor="let proyecto of items">
+      <ion-item detail lines="full" (click)='consultarp(proyecto.key)' text-wrap>
+        <ion-icon name="desktop" slot="left"></ion-icon>
+        Proyecto: {{proyecto.proy_title}}
+      </ion-item>
+      <ion-item-options side="left">
+        <button ion-button color="secondary" 
+           (click)="editp(proyecto.key)">
+          <ion-icon name="create"></ion-icon>
+          Editar
+        </button>
+        <button ion-button color="danger" 
+          (click)="deletep(proyecto.key)">
+          <ion-icon name="remove-circle"></ion-icon>
+            Borrar
+        </button>
+      </ion-item-options>
+
+      <ion-item-options side="right">
+        <button ion-button color="default" 
+          (click)="participantesp(proyecto.key)">
+          <ion-icon name="person-add"></ion-icon>  
+          Nuevo P.          
+        </button>
+        <button ion-button color="dark" 
+          (click)="listaparticipantesp(proyecto.key)">
+          <ion-icon name="people"></ion-icon>
+          Participantes
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>
+    
